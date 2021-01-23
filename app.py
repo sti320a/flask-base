@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, redirect, render_template, request
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 
@@ -20,7 +20,17 @@ app = create_app()
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    samples = Sample.query.all()
+    return render_template('index.html', samples=samples)
+
+
+@app.route('/create_sample', methods=['POST'])
+def create_sample():
+    contents = request.form['contents']
+    sample = Sample(contents=contents)
+    db.session.add(sample)
+    db.session.commit()
+    return redirect('/')
 
 
 if __name__ == '__main__':
