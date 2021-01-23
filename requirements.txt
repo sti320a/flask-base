@@ -3,3 +3,4 @@ Flask-Admin
 Flask-Login
 Flask-SQLAlchemy
 Flask-Migrate
+Flask-BasicAuth

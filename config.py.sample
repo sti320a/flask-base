@@ -5,6 +5,8 @@ class ProductConfg:
     SQLALCHEMY_DATABASE_URI = '*****'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_ECHO = False
+    BASIC_AUTH_USERNAME = '*****'
+    BASIC_AUTH_PASSWORD = '*****'
 
 
 class DevelopmentConfig:
@@ -14,6 +16,7 @@ class DevelopmentConfig:
     SQLALCHEMY_DATABASE_URI = 'sqlite:///development.sqlite3'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_ECHO = False
-
+    BASIC_AUTH_USERNAME = 'admin'
+    BASIC_AUTH_PASSWORD = 'password'
 
 Config = DevelopmentConfig
