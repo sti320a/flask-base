@@ -1,0 +1,19 @@
+class ProductConfg:
+
+    DEBUG = False
+    FLASK_ADMIN_SWATCH = 'cerulean'
+    SQLALCHEMY_DATABASE_URI = '*****'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_ECHO = False
+
+
+class DevelopmentConfig:
+
+    DEBUG = True
+    FLASK_ADMIN_SWATCH = 'cerulean'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///development.sqlite3'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_ECHO = False
+
+
+Config = DevelopmentConfig
